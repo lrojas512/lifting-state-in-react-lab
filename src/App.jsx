@@ -7,11 +7,11 @@ import './App.css';
 const App = () => {
   const [stack,setStack] = useState([])
 
-  const addToStack = (ingredient) => {
+  const addToBurger = (ingredient) => {
     setStack([...stack, ingredient])
   }
 
-  const removeFromStack = (index) => {
+  const removeFromBurger = (index) => {
     setStack(stack.filter((_,i) => i !== index))
   }
 
@@ -38,10 +38,10 @@ const App = () => {
       <section>
         <IngredientList 
         ingredients = {availableIngredients}
-        addToStack={addToStack} />
+        addToBurger={addToBurger} />
         <BurgerStack 
         stack={stack} 
-        removeFromStack = {removeFromStack} />
+        removeFromBurger = {removeFromBurger} />
       {/* List & Stack components */}
       </section>
     </main>

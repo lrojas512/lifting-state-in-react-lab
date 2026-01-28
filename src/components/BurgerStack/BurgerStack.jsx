@@ -1,7 +1,7 @@
 // src/components/BurgerStack/BurgerStack.jsx
 
 
-const BurgerStack = ({stack, removeFromStack }) => {
+const BurgerStack = ({stack, removeFromBurger }) => {
   return (
     <>
     {stack.length === 0 ?(
@@ -13,7 +13,7 @@ const BurgerStack = ({stack, removeFromStack }) => {
                 style ={{backgroundColor: ingredient.color}}
                 >
                     {ingredient.name}
-                    <button onClick= {()=> removeFromStack(index)}>X</button>
+                    <button onClick= {()=> removeFromBurger(index)}>X</button>
                 </li>
             ))}
         </ul>

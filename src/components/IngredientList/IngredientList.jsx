@@ -1,6 +1,6 @@
 // src/components/IngredientList/IngredientList.jsx
 
-const IngredientList = ({ingredients,addToStack}) => {
+const IngredientList = ({ingredients,addToBurger}) => {
   return <ul>
     {ingredients.map((ingredient, index) =>(
         <li 
@@ -8,7 +8,7 @@ const IngredientList = ({ingredients,addToStack}) => {
         style= {{backgroundColor: ingredient.color}}
         >
         {ingredient.name}
-        <button onClick = {() => addToStack(ingredient)}>+</button>
+        <button onClick = {() => addToBurger(ingredient)}>+</button>
         </li>
     ))}
     </ul>
